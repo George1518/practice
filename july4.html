@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="p">hello</p>
+<h1>passing function as parameter</h1>
+    <script>
+
+        const p = document.getElementById('p');
+        const q = p.innerText.split('').reverse().join('');
+        p.innerText = q;
+        
+
+
+        function greet(name)
+        {
+            alert('HELLO,' + name + '!')
+        }
+        function callFunction(func,value)
+        {
+            func(value)
+        }
+
+        callFunction(greet,"GUGANRAJ")
+
+
+
+        function forMe()
+        {
+            console.log('ooooooooooooooooooooooooooooooooooooooooooooooooooo')
+        }
+        function toCall(value)
+        {
+           value()
+        }
+
+    toCall(forMe);
+    </script>
+</body>
+</html>

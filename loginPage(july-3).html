@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <h2>login</h2>
+    <label for="uname">username
+     <input type="text" id="uname" placeholder="hello">
+    </label>
+    <label for="pass">pass
+     <input type="password" id="pass " placeholder="hello">
+    </label>
+
+    <button type="submit" id="btn" onclick="validate()">loginmm</button>
+
+
+       <script>
+         function validate()
+         {
+            const uname = document.getElementById('uname').value.trim();
+            const pass = document.getElementById('pass').value.trim();
+            console.log(uname,pass);
+            const adminValues = JSON.parse(localStorage.getItem('users')) || [];
+             
+            const userObj =
+            {
+                username: uname,
+                password: pass
+            }
+
+             adminValues.push(userObj);
+             localStorage.setItem('users',JSON.stringify(adminValues));
+
+         }
+           
+       </script>
+</body>
+</html>

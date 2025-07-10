@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+</head>
+<body>
+    <H2>GUESS THE NUMBER UNDER 10</H2>
+    <p>NUMBER1</p>
+    <input type="number" id="num1">
+    <br> <br>
+    <button onclick="guess()">Play game</button>
+
+    <div><span id="user"></span> <span id="judge"></span> <span id="com"></span></div>
+    <script>
+           let num2 = Math.floor(Math.random()*10 + 1)
+       
+          
+        function guess()
+        {
+            const num1 = Number(document.getElementById('num1').value);
+            const userValue = document.getElementById('user')
+            const comValue = document.getElementById('com')
+            const judge = document.getElementById('judge')
+
+            userValue.textContent = num1;
+            comValue.textContent = "...";
+             judge.innerHTML = "<h3> != </h3>"
+            if(num1 === num2)
+        {
+            judge.innerHTML = "<h3> = </h3>"
+                 comValue.textContent = num2;
+                  console.log(num1,num2)
+        }
+
+        else if(num1 < num2)
+        {
+             judge.innerHTML = "<h3> < </h3>"
+             console.log(num1,num2)
+        }
+       
+        else if(num1 > num2)
+        {
+             judge.innerHTML = "<h3> > </h3>"
+              console.log(num1,num2)
+        }
+
+       
+            
+        }
+        
+    </script>
+</body>
+</html>
