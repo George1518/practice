@@ -7,33 +7,33 @@
   </head>
   <body>
     <script>
-      // let outName = (fName, SName) => {
-      //   let innerName = (fNamee, Snamee) => {
-      //     let fullName = fName + "" + SName;
-      //     return fullName;
-      //   };
-      //   let newName = "hello" + " " + innerName(fName, SName);
+      let outName = (fName, SName) => {
+        let innerName = (fNamee, Snamee) => {
+          let fullName = fName + "" + SName;
+          return fullName;
+        };
+        let newName = "hello" + " " + innerName(fName, SName);
 
-      //   return newName;
-      // };
+        return newName;
+      };
 
-      // console.log(outName("gugan", "raj"));
+      console.log(outName("gugan", "raj"));
 
 
-      // let obj =
-      // {
-      //   id: "g001",
-      //   pass: false,
-      //   name: "guganraj",
-      //   merge: () =>
-      // {
-      //      console.log(this.id)
+      let obj =
+      {
+        id: "g001",
+        pass: false,
+        name: "guganraj",
+        merge: () =>
+      {
+           console.log(this.id)
           
-      // }
+      }
     
-      // }
+      }
 
-      // obj.merge();
+      obj.merge();
 
 
       function func(...a)
@@ -45,7 +45,6 @@
 
       func("hello","world","!",'i\'m','guganraj')
       
-
     </script>
   </body>
 </html>
