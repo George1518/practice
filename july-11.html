@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+         const obj =
+         {
+            a:1,
+            b: 2,
+            sum: () =>
+         {
+            return this.a + this.b;
+         }
+         }
+         console.log(obj.sum.bind(obj))
+
+
+         try {
+    let result = 10 / 0; // Dividing by zero is bad!
+    console.log("Result:", result);
+} catch (error) {
+    console.log("Oops! You can't divide by zero!"); // Friendly message
+}
+
+let a = "sorry " ;
+
+console.log(a.repeat(1000))
+
+let name = "gugan";
+let newName = name.replace('gugan','george')
+console.log(name)
+
+
+
+setInterval(() => {
+
+   
+for(i=0;i>5;i++)
+{
+
+ 
+    console.log(newName)
+    
+}
+}, 2000);
+
+
+    </SCript>
+</body>
+</html>
